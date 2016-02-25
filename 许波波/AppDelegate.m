@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+   
+    //开启距离传感器
+    [UIDevice currentDevice].proximityMonitoringEnabled = YES;
+    //监听距离改变的通知
+    
+    //1创建窗口
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    self.window.windowLevel = UIWindowLevelAlert;
+    //2，创建窗口的根控制器
+    MainViewController * main = [[MainViewController alloc] init];
+    main.view.backgroundColor = [UIColor whiteColor];
+//    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    self.window.rootViewController = main;
+    //3.显示窗口
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }

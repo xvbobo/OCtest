@@ -1,0 +1,16 @@
+//
+//  pchFile.pch
+//  许波波
+//
+//  Created by alan on 16/2/17.
+//  Copyright © 2016年 alan. All rights reserved.
+//
+
+#ifndef pchFile_pch
+#define pchFile_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "CustomStatusBar.h"
+#import <objc/message.h>
+#endif /* pchFile_pch */

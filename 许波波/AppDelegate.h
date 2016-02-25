@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CustomStatusBar.h"
+#import "ASIDownloadCache.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    ASIDownloadCache * myCache;
+}
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic,retain) ASIDownloadCache *myCache;
 
 @end
 
